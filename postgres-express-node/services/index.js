@@ -11,6 +11,3 @@ exports.medicalTestServiceInstance = new MedicalTestService({
   logger,
   testModel: MedicalTest,
 });
-//=======
-//exports.loginServiceInstance = new LoginService({ logger, userModel: User });
-//>>>>>>> 21b237f... inital login logic
