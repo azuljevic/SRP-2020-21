@@ -38,6 +38,9 @@ module.exports = {
         methods: ["POST"],
       },
       ],
+    }, },
+    bcrypt: {
+      SALT_ROUNDS: 12,
     },
-  },
+  
 };

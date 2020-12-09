@@ -1,4 +1,4 @@
-
+const bcrypt=require("bcryptjs")
 const jwt=require("jsonwebtoken");
 const config= require("../config");
 
@@ -27,7 +27,8 @@ async login({ username, password}) {
 
   }
   this.logger.info("Checking password");
-  if (userRecord.password ===password ) {
+  const validPassword = await bcrypt.compare(password, userRecord.password);
+  if (validPassword ) {
     this.logger.info("Password correct");
     const user = {
       username: userRecord.username,
