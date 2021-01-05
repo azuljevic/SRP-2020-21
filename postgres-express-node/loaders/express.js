@@ -14,11 +14,11 @@ module.exports = ({ app, HttpLogger: logger }) => {
   app.use(cors());
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
-  app.use(jwt({
-    algorithms: config.jwt.algorithms,
-    secret: config.jwt.secret,
+  //app.use(jwt({
+    //algorithms: config.jwt.algorithms,
+    //secret: config.jwt.secret,
 
-  }).unless(config.jwt.exclude));
+  //}).unless(config.jwt.exclude));
   //---------------------------
   // LOAD/MOUNT API ROUTES
   // (path prefix e.g. /api)
