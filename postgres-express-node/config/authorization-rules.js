@@ -66,19 +66,19 @@ function defineDoctorRules({ can }, user) {
 }
 
 function defineUserRules({ can }, user) {
-  // entity User
-  can(["read", "delete"], "User", { id: user.id });
-  can(["update"], "User", ["username", "password"], {
-    id: user.id,
-  });
+  can("manage", "all");// entity User
+  //can(["read", "delete"], "User", { id: user.id });
+  //(["update"], "User", ["username", "password"], {
+   // id: user.id,
+  //});
 
   // entity MedicalTest
-  can(["create", "read", "delete"], "MedicalTest", {
-    UserId: user.id,
-  });
-  can(["update"], "MedicalTest", ["name", "result"], {
-    UserId: user.id,
-  });
+  //can(["create", "read", "delete"], "MedicalTest", {
+   // UserId: user.id,
+  //});
+  //can(["update"], "MedicalTest", ["name", "result"], {
+   // UserId: user.id,
+  ///});
 }
 
 function defineAnonymousRules({ can }, user) {
